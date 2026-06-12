@@ -6,7 +6,7 @@ services:
     ports:
       - "${SEARXNG_HOST}:${SEARXNG_PORT}:8080"
     volumes:
-      - ./config/settings.yml:/etc/searxng/settings.yml
+      - ./config/settings.yml:/etc/searxng/settings.yml:ro
     environment:
       - SEARXNG_SETTINGS_PATH=/etc/searxng/settings.yml
       - SEARXNG_SECRET_KEY=${SEARXNG_SECRET_KEY}
