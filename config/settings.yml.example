@@ -4,12 +4,6 @@ general:
   debug: false
   instance_name: "Ded Search"
 
-brand:
-  new_issue_url: false
-  docs_url: false
-  public_instances: false
-  wiki_url: false
-
 search:
   safe_search: 0
   autocomplete: "duckduckgo"
@@ -18,9 +12,9 @@ search:
     - html
 
 server:
+  secret_key: "change-me-generate-your-own-secret"
   bind_address: "0.0.0.0"
   port: 8080
-  secret_key: "${SEARXNG_SECRET_KEY}"
   limiter: false
   image_proxy: true
   method: "POST"
@@ -34,5 +28,4 @@ ui:
 preferences:
   lock:
     - method
-    - safe_search
     - autocomplete
